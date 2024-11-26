@@ -2,4 +2,405 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family: Arial, sans-serif;
+    
+}
+.body {
+    display: flex;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    width: 100%;
+    min-width: 100vw;
+}
+.container-fluid {
+    display: flex;
+    align-items: center;
+    justify-content: center ;
+    width: 100%;
+    height: 45px;
+    padding: 0;
+    margin: 0;
+    background: #c5d6ee;
+    overflow: hidden;
+    position: sticky;
+}
+.container-fluid span {
+    text-align: center;
+    cursor: pointer;
+}
+.container-fluid span a {
+    font-size: 20px;
+    font-weight: bolder;
+    color: black;
+    margin: 0;
+    padding: 0;
+    transition: color 0.3s ease, transform 0.3s ease;
+}
+.container-fluid span a:hover {
+    text-decoration: underline;
+    transform: scale(1.2);
+}
+
+
+.navbar {
+    position: sticky; 
+    top: 0;
+    z-index: 1000; /* Ensures it's above other elements */
+    width: 100%;
+    height: 100px; 
+    background: #f0efe7; /* Matches the banner */
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 20px;
+}
+
+
+.logo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 40px;
+    margin: 0px;
+    cursor: pointer;
+}
+
+.nav-list {
+    display: flex; 
+    justify-content: center;
+    align-items: center;
+    list-style: none; 
+    gap: 30px;
+    margin: 0;
+    padding: 0; 
+}
+
+.nav-list li {
+    display: inline; 
+    position: relative;
+}
+
+.nav-list a {
+    text-decoration: none; 
+    color: #608277;
+    font-size: 16px;
+    padding: 10px 1px;
+}
+.nav-list .active {
+    text-decoration: underline;
+}
+
+.nav-list a:hover {
+    background: #f0f0e7;
+    color: #717171; 
+    text-decoration: underline;
+    transform: scale(1.2); 
+}
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+.dropdown-button {
+    padding: 10px 20px;
+    background: transparent;
+    color: #717171;
+    border: none;
+    cursor: pointer;
+    border-radius: 4px;
+}
+.dropdown :hover {
+    text-decoration: underline;
+}
+.dropdown-menu {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: white;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    border-radius: 4px;
+    z-index: 1000;
+    min-width: 150px;
+    padding: 0;
+    margin: 0;
+    list-style-type: none;
+}
+.dropdown-menu li a {
+    display: block;
+    padding: 10px;
+    color: black;
+    text-decoration: none;
+}
+.dropdown-menu li a:hover {
+    background-color: #f1f1f1;
+}
+.dropdown-button i {
+    padding-left: 10px;
+}
+
+.nav-icons {
+    display: flex; 
+    gap: 10px; 
+    align-items: center;
+    padding: 0;
+}
+
+.nav-icons a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #608277;
+    text-decoration: none;
+    font-size: 24px;
+    width: 40px;
+    height: 40px;
+}
+.nav-icons a svg {
+    width: 40px; 
+    height: 40px;
+    fill: currentColor;
+    display: block;
+}
+.nav-icons a:hover {
+    color: burlywood;
+    transform: scale(1.2); 
+}
+
+
+.nav-list .dropdown {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+}
+.nav-list .dropdown select {
+    margin-top: 5px;
+    font-size: 14px;
+    border: none;
+    font-size: 16px;
+    padding: 10px 1px;
+    cursor: pointer;
+    background: transparent;
+    color: inherit;
+    appearance: none; 
+    -webkit-appearance: none; 
+    -moz-appearance: none;
+}
+.nav-list .dropdown select:focus {
+    outline: none;
+    border-color: #717171;
+}
+.nav-list .dropdown select::after {
+    content: '';
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    border-width: 5px;
+    border-style: solid;
+    border-color: transparent transparent #333 transparent; /* Arrow color (dark gray) */
+    pointer-events: none; 
+}
+.nav-list .dropdown select:focus {
+    outline: none; 
+}
+.banner-wrap {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    min-height: 100vh; 
+    background-color: #f0efe7;
+    padding: 0 40px;
+    box-sizing: border-box;
+}
+
+.head-info {
+    flex: 1; /* Ensures it takes up space on the left */
+    display: flex;
+    flex-direction: column; /* Arranges content vertically */
+    justify-content: center; /* Centers content vertically */
+    align-items: flex-start; /* Aligns content to the left */
+    text-align: left; /* Ensures text is left-aligned */
+    gap: 20px; /* Adds space between elements */
+}
+
+.head-info h1 {
+    font-size: 3rem; /* Increases heading font size */
+    line-height: 1.2; /* Ensures consistent spacing between lines */
+    word-break: break-word; /* Breaks long words if needed */
+    max-width: 400px; /* Restricts line width to encourage wrapping */
+    color: #333; /* Makes the text stand out */
+}
+
+.head-info p {
+    font-size: 1.5rem; /* Larger font size for readability */
+    line-height: 1.5; /* Better spacing for multiple lines */
+    max-width: 400px; /* Restricts line width for consistent wrapping */
+}
+
+.head-info button {
+    padding: 15px 30px; /* Adds padding for a larger button */
+    font-size: 1.2rem; /* Scales the font size */
+    background-color: #608277; /* Consistent branding color */
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.head-info button:hover {
+    background-color: #507267; /* Darker shade for hover effect */
+}
+
+.head-info button a {
+    text-decoration: none;
+    color: inherit; /* Keeps the button text color */
+}
+
+
+.image {
+    flex: 1; 
+    width: 100%;
+    position: relative;
+}
+
+.image1 {
+    width: 50%;
+    position: absolute; 
+    top: 30%;
+    left: -20%;
+    z-index: 2;
+}
+
+.image2 {
+    position: relative; 
+    width: 100%;
+    z-index: 1;
+}
+
+.image img {
+    width: 100%; /* Restrict image size */
+    height: auto;
+    border-radius: 10px; /* Optional for styling */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Optional for styling */
+}
+
+.text-center {
+    width: 100vw;
+    height: 50%;
+    background: #f0efe7;
+    box-sizing: border-box;
+    border-radius: 10%;
+    box-shadow: 5px 5px 15px 5px #c5d6ee;
+    margin: 40px 0;
+    display: flex;
+    justify-content: center; /* Center content horizontally */
+    align-items: center; 
+}
+
+.lead h1 {
+    font-size: 3rem; 
+    font-weight: bold;
+    color: #333; 
+    margin: 10px;
+}
+
+.p-wrapper p {
+    font-size: 1.2rem; 
+    line-height: 1.6; 
+    color: #555;
+    text-align: center; 
+    padding: 0px 50px 50px 50px;
+}
+
+/* Carousel styling remains unchanged */
+.carousel {
+    width: 100%;
+    height: 60vh;
+    position: relative;
+    overflow: hidden;
+}
+
+.carousel-item {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.carousel-inner img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1)
+}
+
+.carousel-caption {
+    background: #908c2a;
+    color: #fff;
+    padding: 1rem;
+    border-radius: 10px;
+    position: absolute;
+    bottom: 20px;
+    left: 20px;
+    right: 20px;
+    text-align: center;
+}
+
+/* Product container styles */
+.product-container {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    padding: 20px;
+}
+
+.items, .more-info {
+    display: flex;
+    gap: 15px;
+    justify-content: center;
+}
+
+/* Individual product button styles */
+.product-item {
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    padding: 15px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    font-size: 16px;
+    cursor: pointer;
+    width: 150px;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.product-name {
+    font-weight: bold;
+    margin-bottom: 8px;
+}
+
+.product-price {
+    font-size: 14px;
+    color: #FFD700;
+}
+
+.product-item:hover {
+    background-color: #45a049;
+    transform: translateY(-5px);
+}
+
+.product-item:active {
+    transform: translateY(0);
+}
+.footer {
+    background: #908c2a;
 }
